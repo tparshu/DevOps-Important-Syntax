@@ -1,0 +1,9 @@
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+docker pull image_name
+docker image ls
+docker rmi image_name/image_id                                <<---- To remove imaage
+docker push image_name                                        <<---- To upload a docker image into docker hub
+docker commit container_name/container_id <new_image_name>    <<---- To build an image from a customised container
+docker build -t <new_image_name>                              <<---- To create an image from docker file
+docker system prune -a                                        <<---- To delete all images that are not attached to containers
