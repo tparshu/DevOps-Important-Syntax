@@ -31,3 +31,8 @@ Open https://docs.docker.com/compose/install/                        <<---- To i
 docker-compose up  -d                                                <<---- To start the docker-compose from yml file
 docker run --name c1 -it -v /data centos                             <<---- To create a simple volume (-v = Volume, /data = directory)
 docker run --name  c2  -it  --volumes-from c1  centos                <<---- To create Docker Volues
+docker commit   c11   myubuntu                                       <<---- TO save the container as image (snapshot )
+docker build -t  myubuntu .                                          <<---- TO build an image from the dockerfile
+docker commit  c5  tusharp/ubuntu_img26                              <<---- To save the container as an image by adding tag
+docker push tusharp/ubuntu_img26                                     <<---- To push the image to docker registry
+docker swarm init --advertise-addr  private_ip_of_manager            <<---- To install docker swarm  in manager machine
