@@ -1,14 +1,14 @@
-git init   <<----   To initialize the Working directory
-git add . / git add filename    <<----- move untracked file to staged area
-git status                             <<----- To check the status of files
-git commit -m "Commit Name"     <<---- To commit the folder
-git branch <branch_name>        <<----- To Create a new branch
-git checkout <branch_name>      <<----- To move from one branch to another
-git log --oneline               <<----- To show commit history
-git merge <branch_name>               <<----- To merge the child branch to Master branch
-git rebase <master_branch_name>       <<----- To rebase child branch to master
-git rebase -i HEAD~4                  <<----- To rearrange the Commit History
-git cherry-pick <commit-id>           <<----- To selectively pick the commit
-git commit --amend -m "Commit Name"   <<----- To make some changes without changing a commit id
-git reset --hard <commit_id>          <<----- To go back to Previous version of code
-git revert <commit_id>                <<----- To create new commit that undoes the changes made in a previous commit.
+git init                                  <<----   To initialize the Working directory
+git add . / git add filename              <<----- move untracked file to staged area
+git status                                <<----- To check the status of files
+git commit -m "Commit Name"               <<---- To commit the folder
+git branch <branch_name>                  <<----- To Create a new branch
+git checkout <branch_name>                <<----- To move from one branch to another
+git log --oneline                         <<----- To show commit history
+git merge <branch_name>                   <<----- To merge the child branch to Master branch
+git rebase <master_branch_name>           <<----- To rebase child branch to master
+git rebase -i HEAD~4                      <<----- To rearrange the Commit History
+git cherry-pick <commit-id>               <<----- To selectively pick the commit
+git commit --amend -m "Commit Name"       <<----- To make some changes without changing a commit id
+git reset --hard <commit_id>              <<----- To go back to Previous version of code
+git revert <commit_id>                    <<----- To create new commit that undoes the changes made in a previous commit.
