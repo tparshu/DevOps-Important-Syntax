@@ -1,9 +1,8 @@
-sudo apt update
-sudo apt install openjdk-11-jdk -y
-sudo apt-get install -y git  maven
-Open Jenkins website (https://jenkins.io/download/)
-wget  https://get.jenkins.io/war-stable/2.387.1/jenkins.war
-java -jar jenkins.war
-sudo apt-get install -y tomcat8
-sudo apt-get install -y tomcat8-admin
-
+sudo apt update                                                   <<---- To update the repository
+sudo apt install openjdk-11-jdk -y                                <<---- To install the java package
+sudo apt-get install -y git  maven                                <<---- To install the git and maven package
+Open Jenkins website (https://jenkins.io/download/)               <<---- To open jenkins install packages
+wget  https://get.jenkins.io/war-stable/2.387.1/jenkins.war       <<---- To download the jenkins file
+java -jar jenkins.war                                             <<---- To start the Jenkins
+sudo apt-get install -y tomcat8                                   <<---- To install the Tomcat server
+sudo apt-get install -y tomcat8-admin                             <<---- To install tomcat admin package
