@@ -27,3 +27,7 @@ show databases;                                                <<---- TO see lis
 use db_name (use mysql)                                        <<---- TO switch to a databse
 https://justinsomnia.org/2009/04/the-emp-and-dept-tables-for-mysql/  <<---- TO create emp tables and dept tables
 docker run --name  c20 --link c10:c10 -it busybox                    <<---- To Create a multicontainer architecture by using --link
+Open https://docs.docker.com/compose/install/                        <<---- To install docker-compose
+docker-compose up  -d                                                <<---- To start the docker-compose from yml file
+docker run --name c1 -it -v /data centos                             <<---- To create a simple volume (-v = Volume, /data = directory)
+docker run --name  c2  -it  --volumes-from c1  centos                <<---- To create Docker Volues
