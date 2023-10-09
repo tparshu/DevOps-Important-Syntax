@@ -1,2 +1,15 @@
-sudo apt-get install -y ansible
-
+sudo apt-get install -y ansible                                                           <<---- To install ansible
+ansible all -m shell -a 'curl -fsSL https://get.docker.com -o get-docker.sh'              <<---- To install docker script by using Shell ad-hoc command
+ansible all -m shell -a 'sh get-docker.sh'                                                <<---- To install docker by using shell command
+ansible  all -m user  -a  'name=kiran  password=welcome'  -b                              <<---- To create user to all attached node by using user module
+ansible all -m apt  -a 'name=git  state=present' -b                                       <<---- To install git in all managed nodes by using apt module
+ansible all  -m  file -a  'name=/tmp/file5  state=touch'                                  <<---- To create files and folder on managed nodes with file module
+ansible all -m  copy  -a 'src=/etc/passwd     dest=/tmp'                                  <<---- To copy the file  into all nodes by using Copy module
+ansible all  -m fetch  -a 'src=/etc/tomcat9/server.xml  dest=/tmp'  -b                    <<---- To fetch file from all managed nodes to controller
+ansible all -m git  -a 'repo=https://github.com/tparshu91/repo1.git dest=/tmp/mygit' -b   <<---- To download the file from git repository to all managed nodes
+ansible all   -m service    -a 'name=tomcat9  state=restarted'  -b                        <<---- To restart tomcat service in all managed nodes
+ansible all  -m replace  -a 'regexp=8080 replace=9090 path=/etc/tomcat9/server.xml'  -b   <<---- To change the Port number of service on all manged nodes
+ansible all -m   uri  -a 'url=http://facebook.com'                                        <<---- To check facebook is reachable for not in all managed nodes
+ansible-playbook  playbook1.yml  --syntax-check                                           <<---- To check the playbook syntax
+ansible-playbook  playbook1.yml  -b                                                       <<---- To run the Ansible Playbook
+ansible-playbook  playbook5.yml  --extra-vars "a=git b=absent c=no"  -b                   <<---- To run the playbook  by passing values to the variables
